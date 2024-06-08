@@ -16,5 +16,5 @@ FROM node:20-alpine
 COPY --from=build /app/build ./
 COPY . .
 RUN npm install
-RUN install -g serve
+RUN npm install -g serve
 CMD ["serve" , "-s",  "build"]
