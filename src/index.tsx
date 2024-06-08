@@ -1,11 +1,11 @@
 import React from "react";
-import {Auth0Provider} from '@auth0/auth0-react';
+import { Auth0Provider } from '@auth0/auth0-react';
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import BaseRoutes from "./Router";
-import {BrowserRouter} from "react-router-dom";
-import {AuthProvider} from "./context/AuthContext";
-import {QueryClient, QueryClientProvider} from "react-query";
+import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
 
 const queryClient = new QueryClient();
 
-const redirect_uri = 'https://travelapplicationfrontend-1.onrender.com/overview';
+const redirect_uri = 'https://travelapplicationfrontend.onrender.com/overview';
 
 
 root.render(
@@ -31,7 +31,7 @@ root.render(
         <QueryClientProvider client={queryClient}>
             <AuthProvider>
                 <BrowserRouter>
-                    <BaseRoutes/>
+                    <BaseRoutes />
                 </BrowserRouter>
             </AuthProvider>
         </QueryClientProvider>
