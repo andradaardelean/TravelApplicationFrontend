@@ -23,8 +23,5 @@ FROM node:20-alpine
 WORKDIR /app
 COPY --from=build /app/build ./
 
-# Install serve to run the application
-RUN npm install
-
 EXPOSE 3000
 CMD ["npm", "run", "start"]
